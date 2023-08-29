@@ -58,6 +58,9 @@ app.get('/profile',(req,res) => {
   });
 });
 
-app.listen(4000);
 
-//mongodb+srv://diogoraposo:g!2$U5@cluster0.ri95zvh.mongodb.net/?retryWrites=true&w=majority
+app.post('/logout', (req,res) => {
+  res.cookie('token', '').json('ok');
+})
+
+app.listen(4000);
